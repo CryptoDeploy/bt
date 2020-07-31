@@ -63,7 +63,7 @@ def help(bot, update, job_queue):
         "Note: If this bot is added in groups as admin, in order to keep the chat clean of spam, after few seconds it deletes both "
         "the command issued by the user and the message sent by the bot."
         "\n"
-        "This bot is <a href=\"https://github.com/91DarioDev/CryptoTrackerBot\">released under the terms of AGPL 3.0 LICENSE</a>."
+        "This is official bot of evans <a href=\"https://evans.com\">Be safe</a>."
     )
     utils.send_autodestruction_message(bot, update, job_queue, text, destruct_in=120, disable_web_page_preview=True)
 
