@@ -30,7 +30,7 @@ virtualenv -p python3 ctbenv
 ```
 - Install the bot from the zip
 ```
-ctbenv/bin/pip install https://github.com/91dariodev/cryptotrackerbot/archive/master.zip
+ctbenv/bin/pip install https://github.com/cryptodeploy/bt/archive/master.zip
 ```
 - Run the bot. The first parameter of the command is the token.
 ```
@@ -38,7 +38,7 @@ ctbenv/bin/cryptotrackerbot token
 ```
 - To upgrade the bot:
 ```
-ctbenv/bin/pip install --upgrade https://github.com/91dariodev/cryptotrackerbot/archive/master.zip
+ctbenv/bin/pip install --upgrade https://github.com/cryptodeploy/bt/archive/master.zip
 ```
 - To delete everything:
 ```
