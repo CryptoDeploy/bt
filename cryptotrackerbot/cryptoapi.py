@@ -17,13 +17,19 @@
 import requests
 
 
-def get_price(coins): 
-    base = "https://min-api.cryptocompare.com/data/pricemulti?fsyms={}&tsyms=BTC,USD,EUR,CAD"
+def get_price(coins):
+    result = dict()
+    quote_symbols = ['WETH', 'USDT']
     upper_coins = [coin.upper() for coin in coins]
-    string = ",".join(upper_coins)
-    response = requests.get(base.format(string)).json()
-    return response
+    for coin in upper_coins:
+        result[coin] = dict()
 
+    response = requests.get('https://api.uniswap.info/v2/tickers').json()
+    while item := response.popitem() if response else None:
+        if item[1]['base_symbol'] in upper_coins and item[1]['quote_symbol'] in quote_symbols:
+            result[item[1]['base_symbol']][item[1]['quote_symbol']] = item[1]['last_price']
+
+    return result
 
 def get_rank(limit=10):
     base = "https://api.coinmarketcap.com/v1/ticker/?limit={}"
