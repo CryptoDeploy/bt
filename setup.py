@@ -32,6 +32,7 @@ setuptools.setup(
         "python-telegram-bot",
         "requests",
         "matplotlib",
+        "mplfinance"
         "image"
     ],
 
