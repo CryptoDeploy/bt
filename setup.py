@@ -31,7 +31,7 @@ setuptools.setup(
     install_requires=[
         "python-telegram-bot",
         "requests",
-        "matplotlib<2.2.0",
+        "matplotlib",
         "image"
     ],
 

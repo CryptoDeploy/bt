@@ -27,7 +27,7 @@ from PIL import Image
 
 from matplotlib import ticker
 import matplotlib.dates as mdates
-from matplotlib.finance import candlestick_ohlc
+from mplfinance.original_flavor import candlestick_ohlc
 
 from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
@@ -90,7 +90,7 @@ def send_sending_photo_alert(bot, update):
 def sep(num, none_is_zero=False):
     if num is None:
         return 0 if none_is_zero is False else None
-    return "{:,}".format(num)
+    return "{:,}".format(float(num))
 
 
 def arrow_up_or_down(value):
