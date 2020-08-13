@@ -51,7 +51,7 @@ def help(bot, update, job_queue):
         "/graph - <i>return coins graph</i>\n"
         "\n"
         "⚠️: Bot automatically cleans up its messages if given admin rights in supergroups "
-        "\n"
+        "\n""\n"
         "For more info please stay tuned to <a href=\"https://t.me/bestswap\">BestSwap</a>."
     )
     utils.send_autodestruction_message(bot, update, job_queue, text, destruct_in=120, disable_web_page_preview=True)
