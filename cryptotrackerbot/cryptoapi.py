@@ -19,7 +19,7 @@ def get_price(coins):
     return result
 
 def get_rank(limit=10):
-    base = "https://api.coinmarketcap.com/v1/ticker/?limit={}"
+    base = "https://min-api.cryptocompare.com/data/top/mktcapfull?limit={}&tsym=USD"
     response = requests.get(base.format(limit)).json()
     return response
 
