@@ -13,7 +13,7 @@ from telegram.ext.dispatcher import run_async
 @run_async
 def price_command(bot, update, args, job_queue):
     if len(args) == 0:  # return if no args added
-        text = "Error: Please use the /uprice command with the coin you wanna fetch the price \n\nExample:<code>/uprice dai weth pnk</code>"
+        text = "Please use the /uprice command with the coin you wanna fetch the price \n\nExample:<code>/uprice dai weth pnk</code>"
         utils.send_autodestruction_message(bot, update, job_queue, text)
         return
 
