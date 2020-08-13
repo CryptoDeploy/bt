@@ -1,7 +1,7 @@
 
 
-BTC = "⛏"
-USD = "💰"
+WETH = "⛏"
+USDT = "💰"
 EUR = "💶"
 ARROW_UP = "🔼"
 ARROW_DOWN = "🔽"
