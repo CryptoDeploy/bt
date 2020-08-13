@@ -9,7 +9,7 @@ def get_price(coins):
     for coin in upper_coins:
         result[coin] = dict()
 
-    response = requests.get('https://next.api.uniswap.info/v2/tickers -H 'x-api-key: 1tme3bEk2f50bUdDEbTE04P53XsQHbWb9qrz5bhl'').json()
+    response = requests.get('https://next.api.uniswap.info/v2/tickers -H'x-api-key:1tme3bEk2f50bUdDEbTE04P53XsQHbWb9qrz5bhl'').json()
     while item := response.popitem() if response else None:
         if item[1]['base_symbol'] in upper_coins and item[1]['quote_symbol'] in quote_symbols:
             result[item[1]['base_symbol']][item[1]['quote_symbol']] = item[1]['last_price']
