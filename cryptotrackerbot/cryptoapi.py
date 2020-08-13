@@ -4,17 +4,15 @@ import requests
 
 def get_price(coins):
     result = dict()
-    quote_symbols = ['WETH', 'USDT', 'quote_volume']
+    quote_symbols = ['ETH', 'USDT']
     upper_coins = [coin.upper() for coin in coins]
     for coin in upper_coins:
         result[coin] = dict()
 
-    response = requests.get('https://next.api.uniswap.info/v2/tickers', headers={'x-api-key': '1tme3bEk2f50bUdDEbTE04P53XsQHbWb9qrz5bhl'}).json()
+    response = requests.get('https://www.ibbt.exchange/api/v2/peatio/public/markets/tickers').json()
     while item := response.popitem() if response else None:
         if item[1]['base_symbol'] in upper_coins and item[1]['quote_symbol'] in quote_symbols:
-            result[item[1]['base_symbol']][item[1]['quote_symbol']] = item[1]['last_price']
-        if item[2]['base_symbol'] in upper_coins and item[1]['quote_symbol'] in quote_symbols:
-            result[item[1]['base_symbol']][item[1]['quote_symbol']] = item[2]['quote_volume']
+            result[item[1]['base_symbol']][item[1]['quote_symbol']] = item[1]['last']
 
     return result
 
