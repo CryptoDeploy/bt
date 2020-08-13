@@ -1,6 +1,6 @@
 
 
-WETH = "⛏"
+WETH = "🔥"
 USDT = "💰"
 EUR = "💶"
 ARROW_UP = "🔼"
