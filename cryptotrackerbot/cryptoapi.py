@@ -4,7 +4,7 @@ import requests
 
 def get_price(coins):
     result = dict()
-    quote_symbols = ['WETH', 'USDT']
+    quote_symbols = ['WETH', 'USDT', 'quote_volume']
     upper_coins = [coin.upper() for coin in coins]
     for coin in upper_coins:
         result[coin] = dict()
