@@ -40,7 +40,9 @@ def price_command(bot, update, args, job_queue):
 def help(bot, update, job_queue):
     text = (
         "<b>👋👋Welcome to BestSwap Bot👋👋</b>\n"
+        "\n"
         "<b>BestSwapBot is a telegram bot that returns price of tokens listed on uniswap exchange, feel free to join our telegram group @yourgroup . Stay Safe💥💥</b>\n"
+        "\n"
         "<b> Bot Commands:</b>\n"
         "/uprice or /p  - <i>return price of Uniswap assets</i>\n"
         "/help - <i>return help message</i>\n"
