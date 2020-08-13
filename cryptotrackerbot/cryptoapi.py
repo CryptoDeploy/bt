@@ -4,7 +4,7 @@ import requests
 
 def get_price(coins):
     result = dict()
-    quote_symbols = ['WETH', 'USDT', 'quote_volume']
+    quote_symbols = ['WETH', 'USDT']
     upper_coins = [coin.upper() for coin in coins]
     for coin in upper_coins:
         result[coin] = dict()
@@ -13,9 +13,7 @@ def get_price(coins):
     while item := response.popitem() if response else None:
         if item[1]['base_symbol'] in upper_coins and item[1]['quote_symbol'] in quote_symbols:
             result[item[1]['base_symbol']][item[1]['quote_symbol']] = item[1]['last_price']
-        if item[2]['base_symbol'] in upper_coins and item[1]['quote_symbol'] in quote_symbols:
-            result[item[1]['base_symbol']][item[1]['quote_symbol']] = item[2]['quote_volume']
-
+            
     return result
 
 def get_rank(limit=10):
