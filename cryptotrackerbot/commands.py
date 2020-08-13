@@ -39,7 +39,9 @@ def price_command(bot, update, args, job_queue):
 @run_async
 def help(bot, update, job_queue):
     text = (
-        "<b>SUPPORTED COMMANDS:</b>\n"
+        "<b>👋👋Welcome to BestSwap Bot👋👋</b>\n"
+        "<b>BestSwapBot is a telegram bot that returns price of tokens listed on uniswap exchange, feel free to join our telegram group @yourgroup . Stay Safe💥💥</b>\n"
+        "<b> Bot Commands:</b>\n"
         "/uprice or /p  - <i>return price of Uniswap assets</i>\n"
         "/help - <i>return help message</i>\n"
         "/rank - <i>return coins rank</i>\n"
