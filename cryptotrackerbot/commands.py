@@ -13,7 +13,7 @@ from telegram.ext.dispatcher import run_async
 @run_async
 def price_command(bot, update, args, job_queue):
     if len(args) == 0:  # return if no args added
-        text = "Error: You have to append to the command as parameters the code of the crypto you want\n\nExample:<code>/price btc eth xmr</code>"
+        text = "Error: Please use the /uprice command with the coin you wanna fetch the price \n\nExample:<code>/uprice dai weth pnk</code>"
         utils.send_autodestruction_message(bot, update, job_queue, text)
         return
 
@@ -40,7 +40,7 @@ def price_command(bot, update, args, job_queue):
 def help(bot, update, job_queue):
     text = (
         "<b>SUPPORTED COMMANDS:</b>\n"
-        "/price - <i>return price of crypto</i>\n"
+        "/uprice or /p  - <i>return price of Uniswap assets</i>\n"
         "/help - <i>return help message</i>\n"
         "/rank - <i>return coins rank</i>\n"
         "/graph - <i>return coins graph</i>\n"
@@ -48,7 +48,7 @@ def help(bot, update, job_queue):
         "Note: If this bot is added in groups as admin, in order to keep the chat clean of spam, after few seconds it deletes both "
         "the command issued by the user and the message sent by the bot."
         "\n"
-        "This is official bot of evans <a href=\"https://evans.com\">Be safe</a>."
+        "For more info please stay tuned to <a href=\"https://t.me/bestswap\">Be safe</a>."
     )
     utils.send_autodestruction_message(bot, update, job_queue, text, destruct_in=120, disable_web_page_preview=True)
 
